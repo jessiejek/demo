@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ionic App</title>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Ionic App</title>
+    <base href="/" />
 
-  <base href="/" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
 
-  <meta name="color-scheme" content="light dark" />
-  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
 
-  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+    <!-- add to homescreen for ios -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  </head>
 
-  <!-- add to homescreen for ios -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-</head>
+  <body>
+    <app-root></app-root>
+  </body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
-<body>
-  <app-root></app-root>
-</body>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDKDsaaeqc9pA6jm1ri66dhTEk345Tw7Ak",
+      authDomain: "fir-3aba3.firebaseapp.com",
+      projectId: "fir-3aba3",
+      storageBucket: "fir-3aba3.appspot.com",
+      messagingSenderId: "191490812324",
+      appId: "1:191490812324:web:1dcf013158c2694e84f931",
+    };
 
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 </html>

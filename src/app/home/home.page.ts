@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
-  constructor() {}
-
+  constructor(public renderer: Renderer2) {}
+  ngOnInit() {
+    this.renderer.setAttribute(document.body, 'color-theme', 'light');
+  }
 }
